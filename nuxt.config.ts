@@ -11,6 +11,7 @@ export default defineNuxtConfig({
       include: ["flyonui/dist/accordion"],
     },
   },
+  modules: ["nuxt-charts"],
   app: {
     head: {
       title: "Nuxt4 Flyon Starter",
