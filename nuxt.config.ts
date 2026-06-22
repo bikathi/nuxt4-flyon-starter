@@ -7,5 +7,20 @@ export default defineNuxtConfig({
   css: ["./app/assets/css/main.css"],
   vite: {
     plugins: [tailwindcss()],
+    optimizeDeps: {
+      include: ["flyonui/dist/accordion"],
+    },
+  },
+  app: {
+    head: {
+      title: "Nuxt4 Flyon Starter",
+      meta: [
+        {
+          name: "viewport",
+          content: "width=device-width, initial-scale=1",
+        },
+      ],
+      script: [],
+    },
   },
 });
