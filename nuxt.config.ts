@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
     optimizeDeps: {
-      include: ["flyonui/dist/accordion"],
+      include: ["flyonui/flyonui"],
     },
   },
   modules: ["nuxt-charts"],

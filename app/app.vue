@@ -1,6 +1,11 @@
+<script setup lang="ts">
+import GenericInput from "./components/inputs/GenericInput.vue";
+import GenericInputSearchBox from "./components/inputs/GenericInputSearchBox.vue";
+import GenericTextArea from "./components/inputs/GenericTextArea.vue";
+</script>
+
 <template>
   <div>
-    <h1 class="bg-red-500 text-xl">Hello worl</h1>
     <button class="btn">Default</button>
     <button class="btn btn-primary">Primary</button>
     <button class="btn btn-secondary">Secondary</button>
@@ -75,4 +80,35 @@
       </div>
     </div>
   </div>
+
+  <br />
+
+  <GenericInput
+    input-id="sample-input-id"
+    input-label="Sample Label"
+    input-text-size="xs"
+    :input-valid="false"
+    input-helpertext="Sample input helper text"
+  ></GenericInput>
+  <GenericTextArea
+    input-id="sample-textarea-id"
+    input-label="Sample Label"
+    :input-default-row-num="2"
+    input-text-size="lg"
+    :input-valid="false"
+  ></GenericTextArea>
+
+  <GenericInputSearchBox
+    input-id="sample-dropdown-search"
+    input-label="Search Something Here"
+    :input-dropdown-options="[
+      { id: 0, text: 'text-0' },
+      { id: 1, text: 'text-1' },
+      { id: 2, text: 'text-2' },
+      { id: 3, text: 'text-3' },
+      { id: 4, text: 'text-4' },
+      { id: 5, text: 'text-5' },
+    ]"
+  >
+  </GenericInputSearchBox>
 </template>
